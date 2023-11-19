@@ -1,44 +1,44 @@
 <template>
-    <view class="container">
-        <tui-navigation-bar :isOpacity="false" :isImmersive="false" @init="initNavigation" :scrollTop="scrollTop" backgroundColor="#f7f7f7" color="#333">
-            <!-- #ifndef MP-ALIPAY || MP-BAIDU -->
-            <view class="bar w-full flex items-center">
-                <view class="tui-header-icon"><tui-icon color="#333" name="arrowleft" @click="back"></tui-icon></view>
-                <text class="title">Help</text>
-            </view>
-            <!-- #endif -->
-        </tui-navigation-bar>
-        <view style="height: 70px"></view>
-        <view class="help-container">
-            <view class="table-view">
-                <block v-for="(item, index) in dataList" :key="index">
-                    <tui-collapse arrowColor="#bbb" :index="index" :current="current" :disabled="item.disabled" @click="change">
-                        <template v-slot:title>
-                            <tui-list-cell padding="22rpx 30rpx" marginTop="-22rpx" lineColor="#c8c7cc" :hover="!item.disabled">
-                                <text class="text-base text-043168">{{ item.name }}</text>
-                            </tui-list-cell>
-                        </template>
-                        <template v-slot:content>
-                            <rich-text :selectable="true" :nodes="item.intro"></rich-text>
-                        </template>
-                    </tui-collapse>
-                </block>
-            </view>
-        </view>
+  <view class="container">
+    <tui-navigation-bar :isOpacity="false" :isImmersive="false" @init="initNavigation" :scrollTop="scrollTop" backgroundColor="#f7f7f7" color="#333">
+      <!-- #ifndef MP-ALIPAY || MP-BAIDU -->
+      <view class="bar w-full flex items-center">
+        <view class="tui-header-icon"><tui-icon color="#333" name="arrowleft" @click="back"></tui-icon></view>
+        <text class="title">Help</text>
+      </view>
+      <!-- #endif -->
+    </tui-navigation-bar>
+    <view style="height: 70px"></view>
+    <view class="help-container">
+      <view class="table-view">
+        <block v-for="(item, index) in dataList" :key="index">
+          <tui-collapse arrowColor="#bbb" :index="index" :current="current" :disabled="item.disabled" @click="change">
+            <template v-slot:title>
+              <tui-list-cell padding="22rpx 30rpx" marginTop="-22rpx" lineColor="#c8c7cc" :hover="!item.disabled">
+                <text class="text-base text-043168">{{ item.name }}</text>
+              </tui-list-cell>
+            </template>
+            <template v-slot:content>
+              <rich-text :selectable="true" :nodes="item.intro"></rich-text>
+            </template>
+          </tui-collapse>
+        </block>
+      </view>
     </view>
+  </view>
 </template>
 
 <script>
 export default {
-    data() {
-        return {
-            top: 0, //标题图标距离顶部距离
-            scrollTop: 0,
-            current: -1,
-            dataList: [
-                {
-                    name: 'mandate regulation',
-                    intro: `<p style="font-size: 14px;">✅An account with a minimum amount of 100USDT is required for trading.<br>
+  data() {
+    return {
+      top: 0, //标题图标距离顶部距离
+      scrollTop: 0,
+      current: -1,
+      dataList: [
+        {
+          name: 'mandate regulation',
+          intro: `<p style="font-size: 14px;">✅An account with a minimum amount of 100USDT is required for trading.<br>
 ✅Regular Member accounts require 30 tasks to be completed before withdrawals can be requested.<br>
 ✅VIP1 member account needs to complete 40 tasks to request a withdrawal.<br>
 ✅VIP2 member account needs to complete 50 tasks to request a withdrawal.<br>
@@ -53,32 +53,32 @@ export default {
 <br>
 <br>
 Copyright © 1996-2023 Booking™. All rights reserved.</p>`,
-                    disabled: false
-                },
-                {
-                    name: 'About Booking Company',
-                    intro: `<p style="font-size: 14px;">Booking.com BV, the company that manages Booking.com™, is registered and headquartered in Amsterdam, the Netherlands (\\"Booking.com\\", \\"we\\", \\"us\\" or \\"our\\") and offers an online accommodation booking service (the \\"Service\\") published on its website (the \\"Website\\") and operated by local affiliates (the \\"Affiliates\\"). \\"), offers an online accommodation booking service (the \\"Service\\") published on its website (the \\"Website\\") and operated by local subsidiaries (\\"Subsidiaries\\") on a worldwide basis. \\") worldwide. Affiliates provide internal support to Booking.com BV Affiliates only and do not provide the Service, nor do they own, operate or manage the Site or any other website.<br>
+          disabled: false
+        },
+        {
+          name: 'About Booking Company',
+          intro: `<p style="font-size: 14px;">Booking.com BV, the company that manages Booking.com™, is registered and headquartered in Amsterdam, the Netherlands (\\"Booking.com\\", \\"we\\", \\"us\\" or \\"our\\") and offers an online accommodation booking service (the \\"Service\\") published on its website (the \\"Website\\") and operated by local affiliates (the \\"Affiliates\\"). \\"), offers an online accommodation booking service (the \\"Service\\") published on its website (the \\"Website\\") and operated by local subsidiaries (\\"Subsidiaries\\") on a worldwide basis. \\") worldwide. Affiliates provide internal support to Booking.com BV Affiliates only and do not provide the Service, nor do they own, operate or manage the Site or any other website.<br>
 <br>
 Booking provides developers, agencies and merchants, and airlines with the tools and infrastructure to sell around the world the way they want to get online. From start-ups to large enterprises, our customisable back-end supports the creation of innovative shopping experiences today and is ready for what\\'s next. Creating the best headless travel hotel commerce platform requires not only a bold product vision, but also actionable values to guide our daily work and decision-making<br>
 <br>
 <br>
 Copyright © 1996-2023 Booking™. All rights reserved.<br>
 </p>`,
-                    disabled: false
-                },
-                {
-                    name: 'How to achieve higher returns?',
-                    intro: `<p style="font-size: 14px;">-Users can earn additional referral fees by referring new users to become new platform agents. One of the rewards for the referral of 10% of the daily commission<br>
+          disabled: false
+        },
+        {
+          name: 'How to achieve higher returns?',
+          intro: `<p style="font-size: 14px;">-Users can earn additional referral fees by referring new users to become new platform agents. One of the rewards for the referral of 10% of the daily commission<br>
 -Become an agent of the necessary conditions, thirty consecutive days can be questioned online customer service and access to the agent\\'s authority<br>
 -Note: For further clarification, please contact our online customer service.<br>
 <br>
                                                                                                   <br>
                                                                                                    Copyright © 1996-2023 Booking™. All rights reserved.</p>`,
-                    disabled: false
-                },
-                {
-                    name: 'What is a reward order?',
-                    intro: `<p style="font-size: 14px;">Hoteliers have created Reward Orders (Combination Tasks) to attract more guests and increase business turnover.<br>
+          disabled: false
+        },
+        {
+          name: 'What is a reward order?',
+          intro: `<p style="font-size: 14px;">Hoteliers have created Reward Orders (Combination Tasks) to attract more guests and increase business turnover.<br>
 <br>
   What is the Reward Orders (Combination Tasks)?<br>
 Combination Tasks are sent to the platform by Merchants and randomly assigned to Members by the platform. 1 set of Combination Tasks in a job will have 1-3 combinations, and one combination will have 1-3 consecutive negative numbers to form a Reward Order. The Member who completed the Bonus Order will receive 10 times of the commission. Due to the high amount of bonus orders, members are required to recharge the difference and the merchant will return the security deposit to the platform member with profit after completing the bonus order.<br>
@@ -86,11 +86,11 @@ Combination Tasks are sent to the platform by Merchants and randomly assigned to
 <br>
 <br>
 Copyright © 1996-2023 Booking™. All rights reserved.</p>`,
-                    disabled: false
-                },
-                {
-                    name: 'About Pending and On Hold',
-                    intro: `<p style="font-size: 14px;">Notice.<br>
+          disabled: false
+        },
+        {
+          name: 'About Pending and On Hold',
+          intro: `<p style="font-size: 14px;">Notice.<br>
 If you do not complete the task within 24 hours, the merchant will complain about you, and if there are exceptional circumstances, you must deal with the merchant, and if the reputation of the merchant is damaged, the account will be frozen.<br>
 <br>
 <br>
@@ -98,11 +98,11 @@ Users whose credits have been deducted will be automatically blacklisted by the 
 <br>
 <br>
 Copyright © 1996-2023 Booking™. All rights reserved.</p>`,
-                    disabled: false
-                },
-                {
-                    name: 'Privacy Policy',
-                    intro: `<p style="font-size: 14px;">obile application, you are deemed to have agreed and consented to the Company, its related companies and affiliates (collectively referred to herein as \\"Company\\", \\"us\\", \\"we\\" or \\"our\\") and our respective representatives collect, use, disclose and share your personal data and disclose such personal data to the Company\\'s authorized service providers, business partners (\\"Business Partners\\" ) and relevant third parties in the manner set out in this Privacy Policy.<br>
+          disabled: false
+        },
+        {
+          name: 'Privacy Policy',
+          intro: `<p style="font-size: 14px;">obile application, you are deemed to have agreed and consented to the Company, its related companies and affiliates (collectively referred to herein as \\"Company\\", \\"us\\", \\"we\\" or \\"our\\") and our respective representatives collect, use, disclose and share your personal data and disclose such personal data to the Company\\'s authorized service providers, business partners (\\"Business Partners\\" ) and relevant third parties in the manner set out in this Privacy Policy.<br>
 <br>
 If you are under the age of 18, please do not send us any personal data about yourself.<br>
 If you do not agree to this Privacy Policy, please do not access or use our website or mobile application.<br>
@@ -224,11 +224,11 @@ In order to better protect the security of each account, the platform will updat
 <br>
 <br>
 Copyright © 1996-2023 Booking™. All rights reserved.</p>`,
-                    disabled: false
-                },
-                {
-                    name: 'Term and Conditions',
-                    intro: `<p style="font-size: 14px;">Agreement between the agent and the company platform<br>
+          disabled: false
+        },
+        {
+          name: 'Term and Conditions',
+          intro: `<p style="font-size: 14px;">Agreement between the agent and the company platform<br>
 This website and any related mobile applications (\\"Site\\") are operated by Company and these terms and conditions of use (\\"Terms of Use\\") set out the terms under which Company agrees to provide services to you through this website (see terms defined below) and the terms on which the supplier agrees to provide the service to you. Accordingly, this website is provided to you on condition that you accept without modification all terms, conditions and notices under these terms of use. Please read the terms of use carefully. You undertake to perform the obligations contained in these Terms of Use. Your use of this website constitutes your agreement. If you do not agree to these terms of use, you are not authorized to use this site; therefore, please do not use or rate comments through this site. The platform may change these terms of use at any time, and your continued use of the site is conditional on acceptance of the updated terms of use.<br>
 <br>
 1. Definition and scope<br>
@@ -331,107 +331,107 @@ The Company has adopted a policy of terminating subscribers or account holders d
 <br>
 <br>
 Copyright © 1996-2023 Booking™. All rights reserved.</p>`,
-                    disabled: false
-                }
-            ]
+          disabled: false
         }
-    },
-    methods: {
-        initNavigation(e) {
-            this.top = e.top
-        },
-        back() {
-            uni.navigateBack()
-        },
-        change(e) {
-            this.current = this.current == e.index ? -1 : e.index
-        }
-    },
-    onPageScroll(e) {
-        this.scrollTop = e.scrollTop
+      ]
     }
+  },
+  methods: {
+    initNavigation(e) {
+      this.top = e.top
+    },
+    back() {
+      uni.navigateBack()
+    },
+    change(e) {
+      this.current = this.current == e.index ? -1 : e.index
+    }
+  },
+  onPageScroll(e) {
+    this.scrollTop = e.scrollTop
+  }
 }
 </script>
 
 <style scoped lang="scss">
 .container {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 .bar {
-    height: 44px;
-    padding-right: 20rpx;
-    padding-left: 20rpx;
-    border-bottom: 0;
-    background-color: #f7f7f7;
-    -webkit-box-shadow: 0 1px 6px #ccc;
-    box-shadow: 0 1px 6px #ccc;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    top: 0;
+  height: 44px;
+  padding-right: 20rpx;
+  padding-left: 20rpx;
+  border-bottom: 0;
+  background-color: #f7f7f7;
+  -webkit-box-shadow: 0 1px 6px #ccc;
+  box-shadow: 0 1px 6px #ccc;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  top: 0;
 }
 .tui-header-icon {
-    color: #999;
-    font-size: 24px;
-    font-weight: 400;
-    font-style: normal;
-    line-height: 1;
-    display: inline-block;
-    text-decoration: none;
-    -webkit-font-smoothing: antialiased;
-    position: relative;
-    z-index: 20;
+  color: #999;
+  font-size: 24px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1;
+  display: inline-block;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+  z-index: 20;
 }
 .title {
-    font-size: 17px;
-    font-weight: 500;
-    line-height: 44px;
-    position: absolute;
-    display: block;
-    width: 100%;
-    margin: 0 -20rpx;
-    padding: 0;
-    text-align: center;
-    white-space: nowrap;
-    color: #000;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 44px;
+  position: absolute;
+  display: block;
+  width: 100%;
+  margin: 0 -20rpx;
+  padding: 0;
+  text-align: center;
+  white-space: nowrap;
+  color: #000;
 }
 .help-container {
-    width: 95%;
-    margin: auto;
-    background: #fff;
-    padding: 20rpx;
-    border-radius: 20rpx;
+  width: 95%;
+  margin: auto;
+  background: #fff;
+  padding: 20rpx;
+  border-radius: 20rpx;
 }
 .text-043168 {
-    color: #043168;
+  color: #043168;
 }
 .table-view {
-    position: relative;
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-left: 0;
-    list-style: none;
-    background-color: #fff;
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+  background-color: #fff;
 }
 .table-view:before {
-    position: absolute;
-    right: 0;
-    left: 0;
-    height: 1px;
-    content: '';
-    -webkit-transform: scaleY(0.5);
-    transform: scaleY(0.5);
-    background-color: #c8c7cc;
-    top: -1px;
+  position: absolute;
+  right: 0;
+  left: 0;
+  height: 1px;
+  content: '';
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+  background-color: #c8c7cc;
+  top: -1px;
 }
 .table-view:after {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    height: 1px;
-    content: '';
-    -webkit-transform: scaleY(0.5);
-    transform: scaleY(0.5);
-    background-color: #c8c7cc;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  content: '';
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+  background-color: #c8c7cc;
 }
 </style>
