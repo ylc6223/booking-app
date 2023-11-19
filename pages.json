@@ -1,6 +1,5 @@
 {
-	"pages": [
-		{
+	"pages": [{
 			"path": "pages/Home/Home",
 			"style": {
 				"navigationBarTitleText": "",
@@ -41,57 +40,35 @@
 			}
 		},
 		{
-			"path": "pages/language/language",
-			"style": {
-				"navigationBarTitleText": "Language",
-				"enablePullDownRefresh": false
+			"path" : "pages/language/language",
+			"style" : 
+			{
+				"navigationBarTitleText" : "Language",
+				"enablePullDownRefresh" : false
 			}
 		},
 		{
-			"path": "pages/Level/Level",
-			"style": {
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false,
+			"path" : "pages/Level/Level",
+			"style" : 
+			{
+				"navigationBarTitleText" : "",
+				"enablePullDownRefresh" : false,
 				"navigationStyle": "custom"
 			}
 		},
 		{
-			"path": "pages/Help/Help",
-			"style": {
-				"navigationBarTitleText": "Help",
-				"navigationStyle": "custom",
-				"enablePullDownRefresh": false
-			}
-		},
-		{
-			"path": "pages/ChangePwd/ChangePwd",
-			"style": {
-				"navigationBarTitleText": "",
-				"navigationStyle": "custom",
-				"enablePullDownRefresh": true
-			}
-		},
-		{
-			"path": "pages/ChangeWithdrawalPwd/ChangeWithdrawalPwd",
-			"style": {
-				"navigationBarTitleText": "",
-				"navigationStyle": "custom",
-				"enablePullDownRefresh": true
-			}
-		},
-		{
-			"path": "pages/Login/Login",
-			"style": {
-				"navigationBarTitleText": "",
-				"navigationStyle": "custom",
-				"enablePullDownRefresh": true
+			"path" : "pages/inforimgs/inforimgs",
+			"style" : 
+			{
+				"navigationBarTitleText" : "",
+				"enablePullDownRefresh" : false,
+				"navigationStyle": "custom"
 			}
 		}
 	],
 	"tabBar": {
 		"selectedColor": "#000",
-		"list": [
-			{
+		"list": [{
 				"pagePath": "pages/Home/Home",
 				"text": "Home",
 				"iconPath": "",
@@ -132,7 +109,7 @@
 			"background": "#efeff4"
 		}
 	},
-	"easycom": {
+"easycom": {
 		"autoscan": true,
 		"custom": {
 			"tui-(.*)": "@/components/thorui-uni/lib/thorui/tui-$1/tui-$1.vue"

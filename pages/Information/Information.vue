@@ -26,7 +26,7 @@
 			</view>
 			<view class="content-container">
 				<view>
-					<navigator class="w-full">
+					<navigator class="w-full" url="/pages/inforimgs/inforimgs">
 						<image src="/static/Information/imgs/10004.png" class="w-full" mode="widthFix"></image>
 					</navigator>
 				</view>
