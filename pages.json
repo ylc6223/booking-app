@@ -1,0 +1,141 @@
+{
+	"pages": [
+		{
+			"path": "pages/Home/Home",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/Information/Information",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/Reservation/Reservation",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/Order/Order",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/User/User",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/language/language",
+			"style": {
+				"navigationBarTitleText": "Language",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/Level/Level",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/Help/Help",
+			"style": {
+				"navigationBarTitleText": "Help",
+				"navigationStyle": "custom",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/ChangePwd/ChangePwd",
+			"style": {
+				"navigationBarTitleText": "",
+				"navigationStyle": "custom",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/ChangeWithdrawalPwd/ChangeWithdrawalPwd",
+			"style": {
+				"navigationBarTitleText": "",
+				"navigationStyle": "custom",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/Login/Login",
+			"style": {
+				"navigationBarTitleText": "",
+				"navigationStyle": "custom",
+				"enablePullDownRefresh": true
+			}
+		}
+	],
+	"tabBar": {
+		"selectedColor": "#000",
+		"list": [
+			{
+				"pagePath": "pages/Home/Home",
+				"text": "Home",
+				"iconPath": "",
+				"selectedIconPath": ""
+			},
+			{
+				"pagePath": "pages/Information/Information",
+				"text": "Information",
+				"iconPath": "",
+				"selectedIconPath": ""
+			},
+			{
+				"pagePath": "pages/Reservation/Reservation",
+				"text": "Reservation",
+				"iconPath": "",
+				"selectedIconPath": ""
+			},
+			{
+				"pagePath": "pages/Order/Order",
+				"text": "Order",
+				"iconPath": "",
+				"selectedIconPath": ""
+			},
+			{
+				"pagePath": "pages/User/User",
+				"text": "User",
+				"iconPath": "",
+				"selectedIconPath": ""
+			}
+		]
+	},
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#f5f5f5",
+		"app-plus": {
+			"background": "#efeff4"
+		}
+	},
+	"easycom": {
+		"autoscan": true,
+		"custom": {
+			"tui-(.*)": "@/components/thorui-uni/lib/thorui/tui-$1/tui-$1.vue"
+		}
+	}
+}
